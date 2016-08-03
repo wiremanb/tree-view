@@ -157,7 +157,8 @@ int AVL::countNodes()
 node *AVL::rotateLeftChild(node *n)
 {
     node* tmpNode = n->getLeft();
-    n->setLeft(tmpNode->getRight());
+    tmpNode->setParent(n->getParent());
+    n->setLeft(n->getRight());
     tmpNode->setRight(n);
     n->setParent(tmpNode);
     n->setHeight(this->getMax(this->getHeight(n->getLeft()), this->getHeight(n->getRight())) + 1);
@@ -169,7 +170,8 @@ node *AVL::rotateLeftChild(node *n)
 node *AVL::rotateRightChild(node *n)
 {
     node* tmpNode = n->getRight();
-    n->setRight(tmpNode->getLeft());
+    tmpNode->setParent(n->getParent());
+    n->setRight(n->getLeft());
     tmpNode->setLeft(n);
     n->setParent(tmpNode);
     n->setHeight(this->getMax(this->getHeight(n->getLeft()), this->getHeight(n->getRight())) + 1);

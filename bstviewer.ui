@@ -77,6 +77,9 @@
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QGraphicsView" name="treeDisplay">
+        <property name="sizeAdjustPolicy">
+         <enum>QAbstractScrollArea::AdjustToContents</enum>
+        </property>
         <property name="sceneRect">
          <rectf>
           <x>0.000000000000000</x>
@@ -84,6 +87,9 @@
           <width>0.000000000000000</width>
           <height>0.000000000000000</height>
          </rectf>
+        </property>
+        <property name="dragMode">
+         <enum>QGraphicsView::RubberBandDrag</enum>
         </property>
        </widget>
       </item>

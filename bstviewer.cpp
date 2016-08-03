@@ -10,8 +10,9 @@ BSTViewer::BSTViewer(QWidget *parent) :
     ui->setupUi(this);
     this->_scene = new QGraphicsScene();
     this->_scene->setItemIndexMethod(QGraphicsScene::NoIndex);
-    this->_scene->setSceneRect(-500,-250,1000,500);
-    ui->treeDisplay->fitInView(this->_scene->sceneRect());
+    ui->treeDisplay->setSceneRect(-500,-250,1000,500);
+//    this->_scene->setSceneRect();
+//    ui->treeDisplay->fitInView(this->_scene->sceneRect());
     ui->treeDisplay->setScene(this->_scene);
     ui->treeDisplay->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
     avl = new AVL();
@@ -37,7 +38,7 @@ void BSTViewer::on_stepbystepButton_clicked()
     QStringList val = this->ui->treeValues->text().split(",");
     for(QString x : val)
     {
-        std::cout << x.toStdString().c_str() << std::endl;
+        //std::cout << x.toStdString().c_str() << std::endl;
         // If the input is actually a value
         if(x != "")
         {
@@ -57,12 +58,15 @@ void BSTViewer::on_stepbystepButton_clicked()
     {
         node* n = this->_currentNodes.front();
         this->_scene->addItem(n);
-        this->_scene->setSceneRect(this->_scene->itemsBoundingRect());
         this->_currentNodes.pop();
     }
+    QRectF bounds = this->_scene->itemsBoundingRect();
+    bounds.setWidth(bounds.width()*0.9);         // to tighten-up margins
+    bounds.setHeight(bounds.height()*0.9);       // same as above
+    this->_scene->update(bounds);
+    ui->treeDisplay->centerOn(0, 0);
 }
 
 void BSTViewer::on_treeValues_textChanged(const QString &arg1)
 {
-
 }

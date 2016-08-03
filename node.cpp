@@ -90,8 +90,7 @@ void node::setRight(node *r)
 
 void node::setParent(node *p)
 {
-    if(p != NULL)
-        this->_parent = p;
+    this->_parent = p;
 }
 
 bool node::isLeft()
