@@ -62,10 +62,17 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="searchFor"/>
+       <widget class="QLineEdit" name="searchFor">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="searchButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="text">
          <string>Search</string>
         </property>
@@ -117,6 +124,9 @@
         </item>
         <item>
          <widget class="QPushButton" name="stepbystepButton">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="text">
            <string>Step by Step</string>
           </property>

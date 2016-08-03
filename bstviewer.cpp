@@ -27,6 +27,11 @@ BSTViewer::~BSTViewer()
 
 void BSTViewer::on_stepbystepButton_clicked()
 {
+
+}
+
+void BSTViewer::on_treeValues_textChanged(const QString &arg1)
+{
     // Clear screen
     this->_scene->clear();
     // Clear queue
@@ -65,8 +70,4 @@ void BSTViewer::on_stepbystepButton_clicked()
     bounds.setHeight(bounds.height()*0.9);       // same as above
     this->_scene->update(bounds);
     ui->treeDisplay->centerOn(0, 0);
-}
-
-void BSTViewer::on_treeValues_textChanged(const QString &arg1)
-{
 }
