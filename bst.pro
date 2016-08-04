@@ -17,12 +17,14 @@ SOURCES += main.cpp\
     node.cpp \
     avl_tree/avl.cpp \
     min_heap/min_heap.cpp \
-    bst/binary_search_tree.cpp
+    bst/binary_search_tree.cpp \
+    max_heap/max_heap.cpp
 
 HEADERS  += bstviewer.h \
     node.h \
     avl_tree/avl.h \
     min_heap/min_heap.h \
-    bst/binary_search_tree.h
+    bst/binary_search_tree.h \
+    max_heap/max_heap.h
 
 FORMS    += bstviewer.ui
