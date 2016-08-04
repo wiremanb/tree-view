@@ -52,7 +52,8 @@ void BSTViewer::on_treeValues_textChanged(const QString &arg1)
             {
             case 0: avl->insert(n); avl->inorder(&this->_currentNodes); break;
             case 1: bst->insert(n); bst->inorderTraversal(&this->_currentNodes); break;
-            case 2: std::cout << "minheap insert.." << std::endl; break;
+            case 2: min_heap_ptr->insert(n); min_heap_ptr->inorderTraversal(&this->_currentNodes); break;
+            //case 2: std::cout << "minheap insert.." << std::endl; break;
             case 3: std::cout << "maxheap insert.." << std::endl; break;
             default: avl->insert(n);
             };

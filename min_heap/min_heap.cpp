@@ -180,14 +180,10 @@ min_heap::~min_heap() {
 
 //---------------------------------
 //FUNCTION: insert()
-//PURPOSE: Adds key to node and
-//inserts node into heap then re-heaps.
+//PURPOSE: Inserts node into heap then re-heaps.
 //---------------------------------
-void min_heap::insert(int& key) {
+void min_heap::insert(node* newNode) {
 
-    //define variables
-    node* newNode;
-    newNode = new node(key);
     //initialize node ptrs to null
     this->setPtrsNull();
 

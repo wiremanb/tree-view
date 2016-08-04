@@ -39,7 +39,7 @@ class min_heap
     public:
         min_heap();
         ~min_heap();
-        void insert(int& key);
+        void insert(node* newNode);
         bool search(int& key, std::queue<node *> *path);
         bool removeNode();
         void preorderTraversal(std::queue<node *> *path);
