@@ -20,6 +20,7 @@ BSTViewer::BSTViewer(QWidget *parent) :
     bst = new binary_search_tree();
 
     ui->treeValues->setText("1,2,3,4");
+    this->updateTree();
 }
 
 BSTViewer::~BSTViewer()
