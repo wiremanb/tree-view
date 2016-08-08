@@ -138,7 +138,7 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>test</string>
+         <string>Input values to sort (use commas to separate values ex. 1,2,3,4...):</string>
         </property>
        </widget>
       </item>
