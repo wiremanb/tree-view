@@ -18,6 +18,8 @@ BSTViewer::BSTViewer(QWidget *parent) :
     avl = new AVL();
     min_heap_ptr = new min_heap();
     bst = new binary_search_tree();
+
+    ui->treeValues->setText("1,2,3,4");
 }
 
 BSTViewer::~BSTViewer()
