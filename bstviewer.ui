@@ -138,12 +138,16 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>Input values to sort:</string>
+         <string>test</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="treeValues"/>
+       <widget class="QLineEdit" name="treeValues">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
