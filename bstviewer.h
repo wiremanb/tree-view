@@ -23,8 +23,9 @@ public:
 
 private slots:
     void on_stepbystepButton_clicked();
-
     void on_treeValues_textChanged(const QString &arg1);
+
+    void on_treetypeCombo_currentIndexChanged(int index);
 
 private:
     Ui::BSTViewer *ui;
@@ -35,6 +36,8 @@ private:
     min_heap* min_heap_ptr;
     binary_search_tree* bst;
     std::queue<node*> _currentNodes;
+
+    void updateTree();
 };
 
 #endif // BSTVIEWER_H

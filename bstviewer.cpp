@@ -11,8 +11,8 @@ BSTViewer::BSTViewer(QWidget *parent) :
     this->_scene = new QGraphicsScene();
     this->_scene->setItemIndexMethod(QGraphicsScene::NoIndex);
     ui->treeDisplay->setSceneRect(-500,-250,1000,500);
-//    this->_scene->setSceneRect();
-//    ui->treeDisplay->fitInView(this->_scene->sceneRect());
+    //    this->_scene->setSceneRect();
+    //    ui->treeDisplay->fitInView(this->_scene->sceneRect());
     ui->treeDisplay->setScene(this->_scene);
     ui->treeDisplay->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
     avl = new AVL();
@@ -31,6 +31,11 @@ void BSTViewer::on_stepbystepButton_clicked()
 }
 
 void BSTViewer::on_treeValues_textChanged(const QString &arg1)
+{
+    this->updateTree();
+}
+
+void BSTViewer::updateTree()
 {
     // Clear screen
     this->_scene->clear();
@@ -70,4 +75,9 @@ void BSTViewer::on_treeValues_textChanged(const QString &arg1)
     bounds.setHeight(bounds.height()*0.9);       // same as above
     this->_scene->update(bounds);
     ui->treeDisplay->centerOn(0, 0);
+}
+
+void BSTViewer::on_treetypeCombo_currentIndexChanged(int index)
+{
+    this->updateTree();
 }

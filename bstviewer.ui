@@ -36,16 +36,6 @@
           <string>BST</string>
          </property>
         </item>
-        <item>
-         <property name="text">
-          <string>MIN HEAP</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>MAX HEAP</string>
-         </property>
-        </item>
        </widget>
       </item>
       <item>
@@ -165,7 +155,7 @@
      <x>0</x>
      <y>0</y>
      <width>796</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
